@@ -38,5 +38,89 @@ body{
         100% 70%, 
         50% 90%, 
         0 70%
-    );           
+    );     
+    
+    position: relative;             /* Default position*/
 } 
+
+
+/*------- HEADER LOGO BOX -------*/
+.logo-box{
+    position: absolute;             /* It takes position of the father element*/
+    top: 50px;
+    left: 50px;
+}
+
+.logo{
+    height: 30px;
+}
+
+
+/*------- HEADER TEXT -----------*/
+.text-box{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%,-50%);    /*Translate box to center point in X and Y coordinates*/
+}
+
+.heading-primary{
+    color: #ffffff;
+    text-transform: uppercase;  
+    text-align: center;   
+
+    backface-visibility:hidden;         /* Fix to shaking animations*/
+}
+
+.heading-primary-main{
+    display: block;
+    font-weight: 400;
+    font-size: 60px;
+    letter-spacing: 30px;
+
+    animation-name: moveFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;  /* Specifies progress duration of the animation*/
+}
+
+.heading-primary-sub{
+    display: block;
+    font-weight: 700;
+    font-size: 30px;
+    letter-spacing: 15px;
+
+    animation: moveFromRight 1s ease-out;  /* Animation inline declaration */
+}
+
+@keyframes moveFromLeft{
+    0%{
+        opacity: 0;
+        transform: translate(-100px);   /* Animation initial point*/
+    }
+
+    80%{
+        transform: translate(20px);    
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);        /* Move to original position text*/
+    }
+}
+
+
+@keyframes moveFromRight{
+    0%{
+        opacity: 0;
+        transform: translate(100px);   /* Animation initial point*/
+    }
+
+    80%{
+        transform: translate(-20px);    
+    }
+
+    100%{
+        opacity: 1;
+        transform: translate(0);        /* Move to original position text*/
+    }
+}
