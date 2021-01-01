@@ -62,12 +62,12 @@ body{
     top: 40%;
     left: 50%;
     transform: translate(-50%,-50%);    /*Translate box to center point in X and Y coordinates*/
+    text-align: center;
 }
 
 .heading-primary{
     color: #ffffff;
-    text-transform: uppercase;  
-    text-align: center;   
+    text-transform: uppercase; 
 
     backface-visibility:hidden;         /* Fix to shaking animations*/
 }
@@ -92,19 +92,20 @@ body{
     animation: moveFromRight 1s ease-out;  /* Animation inline declaration */
 }
 
+/* Key Frame animations*/
 @keyframes moveFromLeft{
     0%{
         opacity: 0;
-        transform: translate(-100px);   /* Animation initial point*/
+        transform: translateX(-100px);   /* Animation initial point*/
     }
 
     80%{
-        transform: translate(20px);    
+        transform: translateX(20px);    
     }
 
     100%{
         opacity: 1;
-        transform: translate(0);        /* Move to original position text*/
+        transform: translateX(0);        /* Move to original position text*/
     }
 }
 
@@ -112,15 +113,89 @@ body{
 @keyframes moveFromRight{
     0%{
         opacity: 0;
-        transform: translate(100px);   /* Animation initial point*/
+        transform: translateX(100px);   /* Animation initial point*/
     }
 
     80%{
-        transform: translate(-20px);    
+        transform: translateX(-20px);    
     }
 
     100%{
         opacity: 1;
-        transform: translate(0);        /* Move to original position text*/
+        transform: translateX(0);        /* Move to original position text*/
     }
+}
+
+
+@keyframes moveFromBottom{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);   /* Animation initial point*/
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);        /* Move to original position text*/
+    }
+}
+
+/*------- BTN STYLES -----------*/
+/* Pseudo classes */
+.btn:link,
+.btn:visited{       
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+    margin-top: 30px;
+
+    display: inline-block;
+    border-radius: 100px;
+    transition: all .2s;        /* When it no needs specify certainly properties*/
+
+    position: relative;
+}
+
+.btn:hover{        
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+}
+
+.btn:active{        /* Click pseudo class*/
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+}
+
+.btn-white{
+    background-color: #fff;
+    color: #777
+}
+
+/* Pseudo element*/
+.btn::after{    /* runs after select element*/
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;    /* Send it to back of the button */
+    transition: all .5s;
+}
+
+.btn-white::after{
+    background-color: #fff;
+}
+
+.btn:hover::after{  /* It hapens when hover element and pseudo element after*/
+    transform: scaleX(1.5) scaleY(1.6); /*scale or scaleX and scaleY*/
+    opacity: 0;
+}
+
+
+.btn-animation{
+    animation: moveFromBottom .5s ease-out .7s; /* animation, duration, progress animation, delay*/
+    animation-fill-mode: backwards;             /* Fix animation before it runs*/
 }
