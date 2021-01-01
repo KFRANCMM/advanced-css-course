@@ -6,3 +6,37 @@ Medium green: #55c57a
 Dark green: #28b485
 
 */
+
+/* UNIVERSAL SELECTOR*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;         /*Property for quit Extra padding or margin in the boxes*/
+}
+
+body{
+    font-family: "Lato",sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 30px;
+}
+
+.header{
+    height: 95vh;                   /* VH is percent of viewport scale*/
+    background-image: 
+        linear-gradient(to right bottom, #7ed56fbd, #55c57ab2), /* Linear gradient specify direction and colors*/
+        url(../img/hero.jpg);  
+    
+    background-size: cover;         /* Try to fit image into element*/
+    background-position: top;       /* Initial position of background*/
+
+    clip-path: polygon(             /* Especify visible area polygon for background*/
+        0 0,        
+        100% 0, 
+        100% 70%, 
+        50% 90%, 
+        0 70%
+    );           
+} 
