@@ -8,19 +8,27 @@ Dark green: #28b485
 */
 
 /* UNIVERSAL SELECTOR*/
-*{
+*,
+*::after,
+*::before{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;         /*Property for quit Extra padding or margin in the boxes*/
+    box-sizing: inherit;            /* Aplying inherit to box-sizing for better CSS practices*/
+}
+
+html{
+    font-size: 62.5%;    /* Changing root font size calculated by:  10px / default font browser (16px) or user default size  */ 
 }
 
 body{
     font-family: "Lato",sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    /*font-size: 1.6rem;*/
     line-height: 1.7;
     color: #777;
-    padding: 30px;
+    padding: 3rem;
+
+    box-sizing: border-box;         /*Property for quit Extra padding or margin in the boxes*/
 }
 
 .header{
@@ -47,12 +55,12 @@ body{
 /*------- HEADER LOGO BOX -------*/
 .logo-box{
     position: absolute;             /* It takes position of the father element*/
-    top: 50px;
-    left: 50px;
+    top: 5rem;
+    left: 5rem;
 }
 
 .logo{
-    height: 30px;
+    height: 3rem;
 }
 
 
@@ -75,8 +83,8 @@ body{
 .heading-primary-main{
     display: block;
     font-weight: 400;
-    font-size: 60px;
-    letter-spacing: 30px;
+    font-size: 6rem;
+    letter-spacing: 3rem;
 
     animation-name: moveFromLeft;
     animation-duration: 1s;
@@ -86,8 +94,8 @@ body{
 .heading-primary-sub{
     display: block;
     font-weight: 700;
-    font-size: 30px;
-    letter-spacing: 15px;
+    font-size: 3rem;
+    letter-spacing: 1.5rem;
 
     animation: moveFromRight 1s ease-out;  /* Animation inline declaration */
 }
@@ -96,11 +104,11 @@ body{
 @keyframes moveFromLeft{
     0%{
         opacity: 0;
-        transform: translateX(-100px);   /* Animation initial point*/
+        transform: translateX(-10rem);   /* Animation initial point*/
     }
 
     80%{
-        transform: translateX(20px);    
+        transform: translateX(2rem);    
     }
 
     100%{
@@ -113,11 +121,11 @@ body{
 @keyframes moveFromRight{
     0%{
         opacity: 0;
-        transform: translateX(100px);   /* Animation initial point*/
+        transform: translateX(10rem);   /* Animation initial point*/
     }
 
     80%{
-        transform: translateX(-20px);    
+        transform: translateX(-2rem);    
     }
 
     100%{
@@ -130,7 +138,7 @@ body{
 @keyframes moveFromBottom{
     0%{
         opacity: 0;
-        transform: translateY(50px);   /* Animation initial point*/
+        transform: translateY(5rem);   /* Animation initial point*/
     }
 
     100%{
@@ -144,26 +152,26 @@ body{
 .btn:link,
 .btn:visited{       
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 1.4rem;
     text-decoration: none;
-    padding: 15px 40px;
-    margin-top: 30px;
+    padding: 1.5rem 4rem;
+    margin-top: 3rem;
 
     display: inline-block;
-    border-radius: 100px;
+    border-radius: 10rem;
     transition: all .2s;        /* When it no needs specify certainly properties*/
 
     position: relative;
 }
 
 .btn:hover{        
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, .2);
+    transform: translateY(-.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, .2);
 }
 
 .btn:active{        /* Click pseudo class*/
-    transform: translateY(-1px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, .2);
+    transform: translateY(-.1rem);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
 }
 
 .btn-white{
@@ -177,7 +185,7 @@ body{
     display: inline-block;
     height: 100%;
     width: 100%;
-    border-radius: 100px;
+    border-radius: 10rem;
 
     position: absolute;
     top: 0;
