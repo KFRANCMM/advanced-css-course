@@ -1,0 +1,37 @@
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color      : $color-gray-ligth;
+}
+
+.heading-primary {
+    color         : $color-white;
+    text-transform: uppercase;
+
+    backface-visibility: hidden;
+    /* Fix to shaking animations*/
+
+
+    &--main {
+        display       : block;
+        font-weight   : 400;
+        font-size     : 6rem;
+        letter-spacing: 3rem;
+
+        animation-name           : moveFromLeft;
+        animation-duration       : 1s;
+        animation-timing-function: ease-out;
+        /* Specifies progress duration of the animation*/
+    }
+
+    &--sub {
+        display       : block;
+        font-weight   : 700;
+        font-size     : 3rem;
+        letter-spacing: 1.5rem;
+
+        animation: moveFromRight 1s ease-out;
+        /* Animation inline declaration */
+    }
+}

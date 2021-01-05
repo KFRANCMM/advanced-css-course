@@ -1,0 +1,20 @@
+/* UNIVERSAL SELECTOR*/
+*,
+*::after,
+*::before {
+    margin    : 0;
+    padding   : 0;
+    box-sizing: inherit;
+    /* Aplying inherit to box-sizing for better CSS practices*/
+}
+
+html {
+    font-size  : 62.5%;
+    /* Changing root font size calculated by:  10px / default font browser (16px) or user default size  */
+}
+
+body {
+    padding    : 3rem;
+    box-sizing : border-box;
+    /*Property for quit Extra padding or margin in the boxes*/
+}

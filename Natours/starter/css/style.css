@@ -3,208 +3,159 @@
 *,
 *::after,
 *::before {
-	margin    : 0;
-	padding   : 0;
-	box-sizing: inherit;
-	/* Aplying inherit to box-sizing for better CSS practices*/
-}
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  /* Aplying inherit to box-sizing for better CSS practices*/ }
 
 html {
-	font-size                               : 62.5%;
-	/* Changing root font size calculated by:  10px / default font browser (16px) or user default size  */
-}
+  font-size: 62.5%;
+  /* Changing root font size calculated by:  10px / default font browser (16px) or user default size  */ }
 
 body {
-	font-family: "Lato", sans-serif;
-	font-weight: 400;
-	/*font-size: 1.6rem;*/
-	line-height: 1.7;
-	color      : #777;
-	padding    : 3rem;
-	box-sizing : border-box;
-	/*Property for quit Extra padding or margin in the boxes*/
-}
-
-.header {
-	height             : 95vh;
-	/* VH is percent of viewport scale*/
-	background-image   : linear-gradient(to bottom right, #7ed56fa8, #28b485a6), url(../img/hero.jpg);
-	/* Linear gradient specify direction and colors*/
-	background-size    : cover;
-	/* Try to fit image into element*/
-	background-position: top;
-	/* Initial position of background*/
-	clip-path          : polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%);
-	position           : relative;
-	/* Default position*/
-	/*------- HEADER LOGO BOX -------*/
-	/*------- HEADER TEXT -----------*/
-}
-
-.header__logo-box {
-	position: absolute;
-	/* It takes position of the father element*/
-	top     : 5rem;
-	left    : 5rem;
-}
-
-.header__logo {
-	height: 3rem;
-}
-
-.header__text-box {
-	position  : absolute;
-	top       : 40%;
-	left      : 50%;
-	transform : translate(-50%, -50%);
-	/*Translate box to center point in X and Y coordinates*/
-	text-align: center;
-}
-
-.heading-primary {
-	color              : #fff;
-	text-transform     : uppercase;
-	backface-visibility: hidden;
-	/* Fix to shaking animations*/
-}
-
-.heading-primary--main {
-	display                  : block;
-	font-weight              : 400;
-	font-size                : 6rem;
-	letter-spacing           : 3rem;
-	animation-name           : moveFromLeft;
-	animation-duration       : 1s;
-	animation-timing-function: ease-out;
-	/* Specifies progress duration of the animation*/
-}
-
-.heading-primary--sub {
-	display       : block;
-	font-weight   : 700;
-	font-size     : 3rem;
-	letter-spacing: 1.5rem;
-	animation     : moveFromRight 1s ease-out;
-	/* Animation inline declaration */
-}
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  /*font-size: 1.6rem;*/
+  line-height: 1.7;
+  color: #777;
+  padding: 3rem;
+  box-sizing: border-box;
+  /*Property for quit Extra padding or margin in the boxes*/ }
 
 /* Key Frame animations*/
 @keyframes moveFromLeft {
-	0% {
-		opacity  : 0;
-		transform: translateX(-10rem);
-		/* Animation initial point*/
-	}
-
-	80% {
-		transform: translateX(2rem);
-	}
-
-	100% {
-		opacity  : 1;
-		transform: translateX(0);
-		/* Move to original position text*/
-	}
-}
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+    /* Animation initial point*/ }
+  80% {
+    transform: translateX(2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    /* Move to original position text*/ } }
 
 @keyframes moveFromRight {
-	0% {
-		opacity  : 0;
-		transform: translateX(10rem);
-		/* Animation initial point*/
-	}
-
-	80% {
-		transform: translateX(-2rem);
-	}
-
-	100% {
-		opacity  : 1;
-		transform: translateX(0);
-		/* Move to original position text*/
-	}
-}
+  0% {
+    opacity: 0;
+    transform: translateX(10rem);
+    /* Animation initial point*/ }
+  80% {
+    transform: translateX(-2rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+    /* Move to original position text*/ } }
 
 @keyframes moveFromBottom {
-	0% {
-		opacity  : 0;
-		transform: translateY(5rem);
-		/* Animation initial point*/
-	}
+  0% {
+    opacity: 0;
+    transform: translateY(5rem);
+    /* Animation initial point*/ }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    /* Move to original position text*/ } }
 
-	100% {
-		opacity  : 1;
-		transform: translateY(0);
-		/* Move to original position text*/
-	}
-}
+.heading-primary {
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  /* Fix to shaking animations*/ }
+  .heading-primary--main {
+    display: block;
+    font-weight: 400;
+    font-size: 6rem;
+    letter-spacing: 3rem;
+    animation-name: moveFromLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /* Specifies progress duration of the animation*/ }
+  .heading-primary--sub {
+    display: block;
+    font-weight: 700;
+    font-size: 3rem;
+    letter-spacing: 1.5rem;
+    animation: moveFromRight 1s ease-out;
+    /* Animation inline declaration */ }
 
 /*------- BTN STYLES -----------*/
 .btn {
-	text-transform: uppercase;
-	/* Pseudo classes */
-	/* Pseudo element*/
-}
+  text-transform: uppercase;
+  /* Pseudo classes */
+  /* Pseudo element*/ }
+  .btn:link, .btn:visited {
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    text-decoration: none;
+    padding: 1.5rem 4rem;
+    margin-top: 3rem;
+    display: inline-block;
+    border-radius: 10rem;
+    transition: all .2s;
+    /* When it no needs specify certainly properties*/
+    position: relative; }
+  .btn:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .btn:active {
+    /* Click pseudo class*/
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
+  .btn::after {
+    /* runs after select element*/
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 10rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* Send it to back of the button */
+    transition: all .5s; }
+  .btn--white {
+    background-color: #fff;
+    color: #777; }
+    .btn--white::after {
+      background-color: #fff; }
+  .btn:hover::after {
+    /* It hapens when hover element and pseudo element after*/
+    transform: scaleX(1.5) scaleY(1.6);
+    /*scale or scaleX and scaleY*/
+    opacity: 0; }
+  .btn--animation {
+    animation: moveFromBottom .5s ease-out .7s;
+    /* animation, duration, progress animation, delay*/
+    animation-fill-mode: backwards;
+    /* Fix animation before it runs*/ }
 
-.btn:link,
-.btn:visited {
-	text-transform : uppercase;
-	font-size      : 1.4rem;
-	text-decoration: none;
-	padding        : 1.5rem 4rem;
-	margin-top     : 3rem;
-	display        : inline-block;
-	border-radius  : 10rem;
-	transition     : all .2s;
-	/* When it no needs specify certainly properties*/
-	position       : relative;
-}
-
-.btn:hover {
-	transform : translateY(-0.3rem);
-	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
-}
-
-.btn:active {
-	/* Click pseudo class*/
-	transform : translateY(-0.1rem);
-	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2);
-}
-
-.btn::after {
-	/* runs after select element*/
-	content      : "";
-	display      : inline-block;
-	height       : 100%;
-	width        : 100%;
-	border-radius: 10rem;
-	position     : absolute;
-	top          : 0;
-	left         : 0;
-	z-index      : -1;
-	/* Send it to back of the button */
-	transition   : all .5s;
-}
-
-.btn--white {
-	background-color: #fff;
-	color           : #777;
-}
-
-.btn--white::after {
-	background-color: #fff;
-}
-
-.btn:hover::after {
-	/* It hapens when hover element and pseudo element after*/
-	transform: scaleX(1.5) scaleY(1.6);
-	/*scale or scaleX and scaleY*/
-	opacity  : 0;
-}
-
-.btn--animation {
-	animation          : moveFromBottom .5s ease-out .7s;
-	/* animation, duration, progress animation, delay*/
-	animation-fill-mode: backwards;
-	/* Fix animation before it runs*/
-}
+.header {
+  height: 95vh;
+  /* VH is percent of viewport scale*/
+  background-image: linear-gradient(to bottom right, #7ed56fa8, #28b485a6), url(../img/hero.jpg);
+  /* Linear gradient specify direction and colors*/
+  background-size: cover;
+  /* Try to fit image into element*/
+  background-position: top;
+  /* Initial position of background*/
+  clip-path: polygon(0 0, 100% 0, 100% 70%, 50% 90%, 0 70%);
+  position: relative;
+  /* Default position*/
+  /*------- HEADER LOGO BOX -------*/
+  /*------- HEADER TEXT -----------*/ }
+  .header__logo-box {
+    position: absolute;
+    /* It takes position of the father element*/
+    top: 5rem;
+    left: 5rem; }
+  .header__logo {
+    height: 3rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /*Translate box to center point in X and Y coordinates*/
+    text-align: center; }
