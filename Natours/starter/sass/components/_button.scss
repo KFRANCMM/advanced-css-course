@@ -1,9 +1,9 @@
-/*------- BTN STYLES -----------*/
+//------- BTN STYLES -----------
 
 .btn {
     text-transform: uppercase;
 
-    /* Pseudo classes */
+    //Pseudo classes
     &:link,
     &:visited {
         text-transform : uppercase;
@@ -14,8 +14,7 @@
 
         display      : inline-block;
         border-radius: 10rem;
-        transition   : all .2s;
-        /* When it no needs specify certainly properties*/
+        transition   : all .2s; //When it no needs specify certainly properties
 
         position: relative;
     }
@@ -26,16 +25,16 @@
     }
 
     &:active {
-        /* Click pseudo class*/
+        //Click pseudo class
         transform : translateY(-.1rem);
         box-shadow: 0 .5rem 1rem rgba($color-black, .2);
     }
 
 
 
-    /* Pseudo element*/
+    // Pseudo element 
     &::after {
-        /* runs after select element*/
+        // runs after select element
         content      : "";
         display      : inline-block;
         height       : 100%;
@@ -45,8 +44,7 @@
         position  : absolute;
         top       : 0;
         left      : 0;
-        z-index   : -1;
-        /* Send it to back of the button */
+        z-index   : -1; // Send it to back of the button 
         transition: all .5s;
     }
 
@@ -61,17 +59,14 @@
 
 
     &:hover::after {
-        /* It hapens when hover element and pseudo element after*/
-        transform: scaleX(1.5) scaleY(1.6);
-        /*scale or scaleX and scaleY*/
+        // It hapens when hover element and pseudo element after
+        transform: scaleX(1.5) scaleY(1.6); //scale or scaleX and scaleY
         opacity  : 0;
     }
 
 
     &--animation {
-        animation          : moveFromBottom .5s ease-out .7s;
-        /* animation, duration, progress animation, delay*/
-        animation-fill-mode: backwards;
-        /* Fix animation before it runs*/
+        animation          : moveFromBottom .5s ease-out .7s; //animation, duration, progress animation, delay
+        animation-fill-mode: backwards; //Fix animation before it runs
     }
 }

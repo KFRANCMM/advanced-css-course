@@ -9,8 +9,7 @@ body {
     color         : $color-white;
     text-transform: uppercase;
 
-    backface-visibility: hidden;
-    /* Fix to shaking animations*/
+    backface-visibility: hidden; // Fix to shaking animations
 
 
     &--main {
@@ -21,8 +20,7 @@ body {
 
         animation-name           : moveFromLeft;
         animation-duration       : 1s;
-        animation-timing-function: ease-out;
-        /* Specifies progress duration of the animation*/
+        animation-timing-function: ease-out; // Specifies progress duration of the animation
     }
 
     &--sub {
@@ -31,7 +29,6 @@ body {
         font-size     : 3rem;
         letter-spacing: 1.5rem;
 
-        animation: moveFromRight 1s ease-out;
-        /* Animation inline declaration */
+        animation: moveFromRight 1s ease-out; // Animation inline declaration 
     }
 }

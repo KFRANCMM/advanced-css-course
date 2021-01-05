@@ -1,31 +1,24 @@
 .header {
-    height: 95vh;
-    /* VH is percent of viewport scale*/
+    height: 95vh; //VH is percent of viewport scale
     background-image:
         linear-gradient(to bottom right, $color-primary-light, $color-primary-dark),
-        url(../img/hero.jpg);
-    /* Linear gradient specify direction and colors*/
+        url(../img/hero.jpg); //Linear gradient specify direction and colors
 
-    background-size    : cover;
-    /* Try to fit image into element*/
-    background-position: top;
-    /* Initial position of background*/
+    background-size    : cover; //Try to fit image into element
+    background-position: top; //Initial position of background
 
-    clip-path: polygon(
-            /* Especify visible area polygon for background*/
+    clip-path: polygon( //Especify visible area polygon for background
             0 0,
             100% 0,
             100% 70%,
             50% 90%,
             0 70%);
 
-    position: relative;
-    /* Default position*/
+    position: relative; //Default position
 
-    /*------- HEADER LOGO BOX -------*/
+    //------- HEADER LOGO BOX -------
     &__logo-box {
-        position: absolute;
-        /* It takes position of the father element*/
+        position: absolute; //It takes position of the father element
         top     : 5rem;
         left    : 5rem;
     }
@@ -34,13 +27,12 @@
         height: 3rem;
     }
 
-    /*------- HEADER TEXT -----------*/
+    //------- HEADER TEXT -----------
     &__text-box {
         position  : absolute;
         top       : 40%;
         left      : 50%;
-        transform : translate(-50%, -50%);
-        /*Translate box to center point in X and Y coordinates*/
+        transform : translate(-50%, -50%); //Translate box to center point in X and Y coordinates
         text-align: center;
     }
 

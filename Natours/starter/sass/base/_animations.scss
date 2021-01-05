@@ -1,9 +1,8 @@
-/* Key Frame animations*/
+// Key Frame animations
 @keyframes moveFromLeft {
     0% {
         opacity  : 0;
-        transform: translateX(-10rem);
-        /* Animation initial point*/
+        transform: translateX(-10rem); // Animation initial point
     }
 
     80% {
@@ -12,8 +11,7 @@
 
     100% {
         opacity  : 1;
-        transform: translateX(0);
-        /* Move to original position text*/
+        transform: translateX(0); // Move to original position text
     }
 }
 
@@ -21,8 +19,7 @@
 @keyframes moveFromRight {
     0% {
         opacity  : 0;
-        transform: translateX(10rem);
-        /* Animation initial point*/
+        transform: translateX(10rem); // Animation initial point
     }
 
     80% {
@@ -31,8 +28,7 @@
 
     100% {
         opacity  : 1;
-        transform: translateX(0);
-        /* Move to original position text*/
+        transform: translateX(0); // Move to original position text
     }
 }
 
@@ -40,13 +36,11 @@
 @keyframes moveFromBottom {
     0% {
         opacity  : 0;
-        transform: translateY(5rem);
-        /* Animation initial point*/
+        transform: translateY(5rem); // Animation initial point
     }
 
     100% {
         opacity  : 1;
-        transform: translateY(0);
-        /* Move to original position text*/
+        transform: translateY(0); // Move to original position text
     }
 }
