@@ -4,7 +4,8 @@
   "description": "Practice",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node .",
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "KFRANCMM",
   "license": "ISC",
