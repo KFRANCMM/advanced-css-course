@@ -7,12 +7,12 @@
     background-size    : cover; //Try to fit image into element
     background-position: top; //Initial position of background
 
-    clip-path: polygon( //Especify visible area polygon for background
+    clip-path: polygon( 
             0 0,
             100% 0,
-            100% 70%,
+            100% 65vh,
             50% 90%,
-            0 70%);
+            0 65vh);//Especify visible area polygon for background
 
     position: relative; //Default position
 
