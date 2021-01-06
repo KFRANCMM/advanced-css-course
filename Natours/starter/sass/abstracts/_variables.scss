@@ -1,5 +1,5 @@
 
-// COLOR PALETTE
+// HEADER -- COLOR PALETTE
 
 $color-primary          : #55c57a;
 $color-primary-light    : #7ed56fa8;
@@ -7,3 +7,8 @@ $color-primary-dark     : #28b485a6;
 $color-gray-ligth       : #777;
 $color-white            : #fff;
 $color-black            : #000;
+
+// GRID SYSTEM
+$grid-width             : 114rem;   
+$gutter-vertical        : 8rem;     //Space between rows
+$gutter-horizontal      : 8rem;     //Space between columns

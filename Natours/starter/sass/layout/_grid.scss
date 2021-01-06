@@ -1,0 +1,24 @@
+.row {
+    max-width       : $grid-width; //Calculated to 1114px (stantard width) / 10px equal 1 rem
+    background-color: #eee;
+    margin          : 0 auto; //Centering content
+    
+    // Selecting all elements except LAST-CHILD
+    &:not(:last-child){
+        margin-bottom   : $gutter-vertical;
+    }
+
+    @include clearfix;
+
+    .col-1-of-2 {
+        width: calc((100% - #{$gutter-horizontal}) / 2 ); 
+        float: left;
+        background-color: blueviolet;
+
+        //Applying gutter except last child
+        &:not(:last-child){
+            margin-right: $gutter-horizontal;
+        }
+
+    }
+}
